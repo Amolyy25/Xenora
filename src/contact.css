@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 .main {
     width: '100%';
     margin: '2rem auto';
@@ -28,64 +30,136 @@
     transform: scale(1.05);
 }
 
-  .btn2 {
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    border: 2px solid #fefefe;
-    text-transform: uppercase;
-    color: #fefefe;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 20px;
-    transition: 0.3s;
-  }
+.contact-main {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f8fa;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    flex-direction: column; /* Aligne le contenu verticalement */
+}
 
-  .btn2::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% - -2px);
-    background-color: #212121;
-    transition: 0.3s ease-out;
-    transform: scaleY(1);
-  }
-
-  .btn2::after {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% - 50px);
-    background-color: #212121;
-    transition: 0.3s ease-out;
-    transform: scaleY(1);
-  }
-
-  .btn2:hover::before {
-    transform: translateY(-25px);
-    height: 0;
-  }
-
-  .btn2:hover::after {
-    transform: scaleX(0);
-    transition-delay: 0.15s;
-  }
-
-  .btn2:hover {
-    border: 2px solid #fefefe;
-  }
-
-  .btn2 span {
-    position: relative;
-    z-index: 3;
-  }
-
-  button {
-    text-decoration: none;
+.help-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #3182ce;
+    color: white;
     border: none;
-    background-color: transparent;
-  }`;
+    border-radius: 8px;
+    font-size: 1rem; /* Taille de police du bouton */
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 1rem; /* Espacement entre le bouton et le formulaire */
+}
+
+.help-btn:hover {
+    background-color: #2563eb;
+}
+
+.contact-container {
+    background: #fff;
+    padding: 2rem 1.5rem; /* Réduction du padding */
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    max-width: 700px; /* Augmentation de la largeur pour un format paysage */
+    width: 100%;
+    transition: transform 0.3s;
+}
+
+.contact-container:hover {
+    transform: translateY(-5px);
+}
+
+.contact-title {
+    margin-bottom: 1rem;
+    font-size: 1.5rem; /* Réduction de la taille de la police */
+    color: #2d3748;
+    text-align: center;
+}
+
+.contact-description {
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem; /* Réduction de la taille de la police */
+    text-align: center;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.2rem; /* Ajustement de l'espacement */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 0.9rem; /* Réduction de la taille de la police */
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.7rem; /* Réduction du padding */
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.85rem; /* Réduction de la taille de la police */
+    background: #f9fafb;
+    transition: border 0.2s, background 0.2s;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #3182ce;
+    outline: none;
+    background: #fff;
+}
+
+.contact-btn {
+    width: 100%;
+    padding: 0.8rem; /* Ajustement du padding */
+    background: linear-gradient(90deg, #3182ce 0%, #805ad5 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem; /* Réduction de la taille de la police */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-btn:hover {
+    background: linear-gradient(90deg, #2563eb 0%, #6b21a8 100%);
+    transform: scale(1.05);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+}
+
+.navbar-logo {
+    margin-right: auto;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-links li {
+    text-align: center;
+}
+
