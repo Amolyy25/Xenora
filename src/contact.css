@@ -11,3 +11,19 @@
     max-width: 600px;
     margin: 0 auto;
 }
+
+.navbar-contact-btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.navbar-contact-btn:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+}
