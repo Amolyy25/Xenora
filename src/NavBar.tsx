@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from './assets/logo.png'
 import './NavBar.css'
+import Button from './contactbtn'
 
 const NavBar = () => {
     return (
