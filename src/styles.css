@@ -1,8 +1,0 @@
-.navbar-logo img {
-    transition: transform 0.3s ease, filter 0.3s ease; /* Ajoute une transition */
-}
-
-.navbar-logo img:hover {
-    transform: scale(1.1); /* Agrandit légèrement l'image */
-    filter: brightness(1.1); /* Augmente la luminosité */
-}
