@@ -1,0 +1,12 @@
+.hero {
+    background-color: #f0f0f0;
+    padding: 20px;
+    height: 80vh;
+    font-family: 'Poppins', sans-serif;
+}
+.hero-content {
+    text-align: center;
+}
+.hero-content h1 {
+    font-size: 3rem;
+}
