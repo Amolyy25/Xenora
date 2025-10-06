@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from './assets/logo.png'
 import './NavBar.css'
+import Button from './contactbtn'
 
 const NavBar = () => {
     return (
@@ -15,7 +16,7 @@ const NavBar = () => {
                             <a href="/" className="nodecoration mrr1    ">Accueil</a>
                             <a href="/" className="nodecoration mrr1">A propos</a>
                             <a href="/" className="nodecoration mrr1">Services</a>
-                            <a href="/" className="nodecoration mrr1">Contact</a>
+                            <Button />
                             <a href="/" className="nodecoration mrr1">Faq</a>
                         </li>
                     </ul>
