@@ -54,17 +54,43 @@
     border: 1px solid red;
 }
 .textcontent {
-    width: 50%;
+    width: 40%;
     margin: auto;
     padding: 20px;
 }
 .cardcontent {
     width: 50%;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .mr1 {
     margin: 1rem;
 }
 .text-white {
     color: white;
+}
+.qtrpx {
+    font-size: 14px;
+}
+.vpx {
+    font-size: 20px;
+}
+.fat-title {
+    font-size: 40px;
+}
+.gradient-text {
+    background: linear-gradient(45deg, #A370F0, #42BFDD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
