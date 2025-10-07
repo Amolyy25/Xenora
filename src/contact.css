@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Scroll fluide pour les ancres */
+html {
+    scroll-behavior: smooth;
+}
 
 .main {
     width: '100%';
@@ -14,30 +19,21 @@
     margin: 0 auto;
 }
 
-.navbar-contact-btn {
-    padding: 0.5rem 1.5rem;
-    font-size: 0.9rem;
-    border-radius: 4px;
-    background: #2563eb;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.navbar-contact-btn:hover {
-    background: #1d4ed8;
-    transform: scale(1.05);
-}
 
 .contact-main {
     min-height: 80vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f7f8fa;
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
-    flex-direction: column; /* Aligne le contenu verticalement */
+    align-items: center;      /* centre verticalement */
+    justify-content: center;  /* centre horizontalement */
+    width: 100%;
+    padding: 0 1.5rem;       /* conserve un petit espace latéral */
+    box-sizing: border-box;
+}
+
+/* Centrer le formulaire */
+.contact-main {
+    width: 100%; /* s'assurer que le conteneur principal prend toute la largeur */
+    box-sizing: border-box;
 }
 
 .help-btn {
@@ -64,6 +60,27 @@
     max-width: 700px; /* Augmentation de la largeur pour un format paysage */
     width: 100%;
     transition: transform 0.3s;
+}
+
+/* conteneur réduit (le formulaire) */
+.contact-container.small {
+    position: fixed;
+    bottom: 20px;        /* distance depuis le bas */
+    right: 20px;         /* distance depuis la droite */
+    max-width: 360px;
+    width: 360px;        /* largeur fixe pour éviter que le bloc bouge */
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    z-index: 1200;       /* au-dessus des autres éléments */
+}
+
+/* Wrapper pour le centrage */
+.contact-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-container:hover {
@@ -106,7 +123,7 @@
     font-size: 0.85rem; /* Réduction de la taille de la police */
     background: #f9fafb;
     transition: border 0.2s, background 0.2s;
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     box-sizing: border-box; /* Inclut le padding dans la largeur totale */
 }
 
@@ -116,6 +133,54 @@
     border-color: #3182ce;
     outline: none;
     background: #fff;
+}
+
+/* Styles spécifiques pour la zone de texte conditionnelle */
+.additional-textarea {
+    animation: slideIn 0.3s ease-out;
+    border-left: 3px solid #3182ce;
+    padding-left: 1rem;
+    background: linear-gradient(90deg, rgba(49, 130, 206, 0.05) 0%, transparent 100%);
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.additional-textarea label {
+    color: #3182ce;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.additional-textarea-field {
+    border: 2px solid #e2e8f0;
+    background: #f8fafc;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.additional-textarea-field:focus {
+    border-color: #3182ce;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+
+.additional-textarea-field::placeholder {
+    color: #64748b;
+    font-style: italic;
+}
+
+/* Animation pour l'apparition de la zone de texte */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 200px;
+    }
 }
 
 .contact-btn {
@@ -155,11 +220,51 @@
     align-items: center;
     padding: 0;
     margin: 0;
-    flex-grow: 1;
-    justify-content: center;
+    margin-left: auto;
 }
 
 .navbar-links li {
     text-align: center;
 }
 
+.navbar-links a {
+    text-decoration: none;
+    color: #2d3748;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+    color: #3182ce;
+}
+
+.contact-form textarea,
+.contact-form textarea[readonly] {
+    resize: none; 
+    overflow: auto; 
+}
+
+.contact-form textarea::-webkit-resizer {
+    display: none;
+}
+
+
+/* responsive : centre sur petit écran */
+@media (max-width: 700px) {
+    .contact-wrapper {
+        justify-content: center;
+        padding: 0 0.5rem;
+    }
+    .contact-container.small {
+        right: 12px;
+        bottom: 12px;
+        width: calc(100% - 24px);
+        max-width: none;
+        border-radius: 10px;
+    }
+    
+    .additional-textarea {
+        padding-left: 0.8rem;
+        margin: 0.8rem 0;
+    }
+}
