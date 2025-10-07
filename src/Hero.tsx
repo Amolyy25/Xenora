@@ -1,24 +1,21 @@
 import './Hero.css'
 import Ctabutton from './Ctabutton'
+import Card3D from './Card3D'
+
 const Hero = () => {
     return (
         <>
             <div className="hero">
                 <div className="hero-bg" aria-hidden="true"></div>
-                <div className="hero-content bordertest">
-                    <div className="textcontent bordertest">
-                    <h1>Bienvenue sur Xenora</h1>
-                    <p>Vous avez besoin d'un site web ou d'une application mobile ?</p>
-                    <p>Nous sommes là pour vous aider.</p>
+                <div className="hero-content">
+                    <div className="textcontent ">
+                    <h1 className="fat-title">Bienvenue sur <span className="gradient-text">Xenora</span></h1>
+                    <p className="vpx">Vous avez besoin d'un site web ou d'une application mobile ?</p>
+                    <p className="vpx">Nous sommes là pour vous aider.</p>
                     <Ctabutton />
                     </div>
-                    <div className="cardcontent bordertest">
-                        <div className="card mr1">
-                            <h2>Des sites pensée sur mesure</h2>
-                            <li>Développement par 2 passionnés</li>
-                            <li>Des sites performants et optimisés</li>
-                            <li>Des sites adaptés à vos besoins</li>
-                        </div>
+                    <div className="cardcontent">
+                        <Card3D />
                     </div>
                 </div>
             </div>
