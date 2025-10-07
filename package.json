@@ -11,6 +11,7 @@
     "sync": "powershell -ExecutionPolicy Bypass -File ./scripts/sync.ps1"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.74.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "styled-components": "^6.1.19"
